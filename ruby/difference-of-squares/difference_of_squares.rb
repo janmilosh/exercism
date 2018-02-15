@@ -1,14 +1,14 @@
 class Squares
   def initialize(num)
-    @num = num
+    @first_n_natural_numbers = (1..num)
   end
 
   def square_of_sum
-    (1..@num).reduce { |sum, num| sum + num }**2
+    @first_n_natural_numbers.reduce { |sum, num| sum + num }**2
   end
 
   def sum_of_squares
-    (1..@num).reduce { |sum, num| sum + num**2 }
+    @first_n_natural_numbers.reduce { |sum, num| sum + num**2 }
   end
 
   def difference
