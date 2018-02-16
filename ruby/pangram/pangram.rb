@@ -1,7 +1,6 @@
 module Pangram
   def self.pangram?(phrase)
-    alpha = ('a'..'z').to_a
-    phrase.downcase.split('').uniq.sort.select { |x| alpha.include? x } == alpha
+    ([*'a'..'z'] - phrase.downcase.chars).empty?
   end
 end
 
